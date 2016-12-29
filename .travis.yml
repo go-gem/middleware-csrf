@@ -1,0 +1,12 @@
+language: go
+
+go:
+  - master
+
+before_install:
+  - go get github.com/abbot/go-http-auth
+  - go get github.com/go-gem/gem
+  - go get github.com/mattn/goveralls
+
+script:
+  - $HOME/gopath/bin/goveralls -service=travis-ci
